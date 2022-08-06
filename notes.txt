@@ -1,0 +1,115 @@
+RBi -> dep() wid() 
+
+ICICIC -> dep(){}  wid(){}
+
+HDFC --> dep(){}  wid(){}
+
+
+JPA --> java persistence api
+	save() - insert 
+	delete() - delete 
+	
+
+struts --> spring -->
+2001 HB-> EJB 
+hibernate --> 
+sql ?  
+
+
+java -> db -> yes -> hibernate-pg 
+
+
+db => hibernate => 
+fast performance 
+db independent 
+db -> mysql -> [query ] 
+      pq ->    [modify? ]
+
+
+ORM ->  Object Relational Mapping
+	class-object == table == mapping 
+
+	class	=== 	table
+	object  === 	record
+	variable === 	field 
+	
+class User{
+	int userId;
+	String firstName;
+	String email;
+	String password;
+}
+
+hibernate --> xml 
+hibernate --> annotation 
+
+select * from users 
+
+select * from users where active = true ;
+
+--------------------------------------------------------------------------------
+internal --> interface / class 
+
+
+
+
+maven -> core-> 
+
+to provide db configuration -> we have to create hibernate-config.xml 
+to map  your class with table --> we have to create hibernate mapping file --> hbm file 
+
+input 
+??
+server --> session ? 
+
+login --> email password --> session --> set --> islogin = true role = customer 
+
+
+jsp getmapping url 
+
+
+expense 
+	filter 
+	session islogin true 
+	role = customer 
+	
+class 
+web.xml 
+annotation -> @WebFilter 
+
+@Controller
+@Repository
+@Service 
+@Component 
+
+
+
+@Component 
+@WebFilter
+class LoginCheckFilter{
+
+
+}
+
+---------------hibernate-config.xml ---------------
+
+dtd xsd -> validate .xml 
+
+
+dialect --> class --> native  ->
+		save() --> insert --> pg ? 
+		save()--> insert --> mysql / oracle ? 
+			
+	
+
+hbm2ddl.auto  -> hibernate table =>update 
+
+
+
+
+
+
+
+
+
+
