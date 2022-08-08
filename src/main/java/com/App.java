@@ -77,7 +77,6 @@ public class App {
 			System.out.println(role.getRoleName());
 		}
 		session.close();
-
 	}
 
 	void deleteRoleById() {

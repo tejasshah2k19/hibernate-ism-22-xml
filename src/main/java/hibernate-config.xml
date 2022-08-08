@@ -16,7 +16,8 @@
 		<property name="show_sql">true</property>
 		<property name="hbm2ddl.auto">update</property>
 		
-		<mapping  resource="role.hbm.xml"/> 
+		<mapping  resource="role.hbm.xml"/>
+		<mapping resource="users.hbm.xml"/> 
 	</session-factory>
 
 </hibernate-configuration>
