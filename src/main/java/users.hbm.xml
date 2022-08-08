@@ -17,8 +17,14 @@
 		<property name="password"></property>
 
 		<!-- <one-to-one name="role" class="com.bean.RoleBean" cascade="save-update"></one-to-one> -->
-		<many-to-one name="role" column="roleId" class="com.bean.RoleBean"  not-null="true"></many-to-one>
+		<many-to-one name="role" column="roleId"
+			class="com.bean.RoleBean" not-null="true"></many-to-one>
 
+		<list name="vehicles"  cascade="all">
+			<key column="userId"></key>
+			<index column="vorder"></index>
+			<one-to-many class="com.bean.VehicleBean" />
+		</list>
 	</class>
 
 </hibernate-mapping>

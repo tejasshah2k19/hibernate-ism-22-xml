@@ -1,5 +1,7 @@
 package com.bean;
 
+import java.util.List;
+
 public class UserBean {
 
 	Integer userId;
@@ -7,8 +9,8 @@ public class UserBean {
 	String email;
 	String password;
 	RoleBean role; // roleid rolename --25
-
- 
+	List<VehicleBean> vehicles; 
+	
 	
 	public Integer getUserId() {
 		return userId;
@@ -50,4 +52,13 @@ public class UserBean {
 		this.role = role;
 	}
 
+	public List<VehicleBean> getVehicles() {
+		return vehicles;
+	}
+
+	public void setVehicles(List<VehicleBean> vehicles) {
+		this.vehicles = vehicles;
+	}
+
+	
 }

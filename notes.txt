@@ -104,6 +104,55 @@ dialect --> class --> native  ->
 
 hbm2ddl.auto  -> hibernate table =>update 
 
+------------------------------------------------------------
+
+login --> email password -submit 
+
+controller 
+	credentials 
+		session user / islogin = true 
+
+
+filter -- >request 
+		session islogin = true => yes 
+				access
+				no --> login
+
+doFilter(ServletRequest request,ServletResponse,FilterChain chain){
+	//signup login --> url access --> without login 
+	HttpServletRequest req = (HttpServletRequest)(request);
+	HttpSession session = req.getSession();
+ 	if(session.getAttribute("user") == null){
+		rd.forward("Login.jsp");
+	}else{
+		chaing.doFilter(request,response);
+	}
+
+}
+
+------------------------------------------------------------
+
+
+
+1 to many 
+
+	user 
+	userid	firstname	
+	1		ram 		
+	
+	vehicle
+	vid		regno			userid	#type
+	1		gj10hg6758		1		 
+	2		gj12hg5263 		1		 
+
+
+
+
+
+
+
+
+
 
 
 
