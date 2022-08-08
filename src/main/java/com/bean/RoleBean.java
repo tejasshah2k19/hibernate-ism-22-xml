@@ -3,6 +3,7 @@ package com.bean;
 //ORM 
 //class object == relation  == map 
 
+//role table 
 public class RoleBean {
 	private int roleId;
 	private String roleName;
