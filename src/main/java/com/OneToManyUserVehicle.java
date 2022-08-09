@@ -14,7 +14,8 @@ import com.bean.UserBean;
 import com.bean.VehicleBean;
 
 public class OneToManyUserVehicle {
-	public static void main(String[] args) {
+
+	void first() {
 
 		Configuration cfg = null;
 		SessionFactory factory = null;
@@ -23,7 +24,7 @@ public class OneToManyUserVehicle {
 		factory = cfg.buildSessionFactory();
 		Session session = factory.openSession();
 		Transaction tx = session.beginTransaction();
-		UserBean user = session.get(UserBean.class, 3);//ram 
+		UserBean user = session.get(UserBean.class, 3);// ram
 
 		Scanner scr = new Scanner(System.in);
 
@@ -35,12 +36,12 @@ public class OneToManyUserVehicle {
 		VehicleBean v2 = new VehicleBean();
 		v2.setRegNo(scr.next());
 
-		if(user.getVehicles() == null) {
+		if (user.getVehicles() == null) {
 			List<VehicleBean> list = new ArrayList<VehicleBean>();
 			list.add(v1);
 			list.add(v2);
 			user.setVehicles(list);
-		}else {
+		} else {
 			user.getVehicles().add(v1);
 			user.getVehicles().add(v2);
 		}
@@ -53,5 +54,24 @@ public class OneToManyUserVehicle {
 
 		// userdetail
 		// ssn profile gender
+
+	}
+
+	public static void main(String[] args) {
+
+		Configuration cfg = null;
+		SessionFactory factory = null;
+
+		cfg = new Configuration().configure("hibernate-config.xml");
+		factory = cfg.buildSessionFactory();
+		Session session = factory.openSession();
+
+		UserBean user = session.get(UserBean.class, 3);// ram
+		System.out.println(user.getFirstName());
+		System.out.println("getting vehicle...");
+		System.out.println(user.getVehicles().size());
+		System.out.println("getting role.");
+		System.out.println(user.getRole());
+
 	}
 }
