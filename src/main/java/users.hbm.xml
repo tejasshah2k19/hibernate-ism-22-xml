@@ -22,7 +22,7 @@
 
 		<!-- List - duplicate Set - no duplicate -->
 		<!--  delete update all none -->
-		<list name="vehicles" cascade="all">
+		<list name="vehicles" cascade="all" fetch="join" >
 			<key column="userId" ></key>
 			<index column="vorder"></index>
 			<one-to-many class="com.bean.VehicleBean" />
