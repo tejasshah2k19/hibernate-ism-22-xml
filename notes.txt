@@ -146,6 +146,110 @@ doFilter(ServletRequest request,ServletResponse,FilterChain chain){
 	2		gj12hg5263 		1		 
 
 
+------------------------------------------------------------
+
+	user
+	userid	fn 		  ln
+	1	   ram bhai   patel shah 
+	
+	
+	
+	product 
+	productid 	pname 
+	1			iphone
+	2			laptop
+	
+	
+	cart  
+	cartid   userid		productid	qty	
+	1			10			1
+	2			10			2
+	
+	user
+	userid		fn			nationality		religions
+	1			tejas		indian			hindu/jain
+	2			ram							hindu/bhaman 
+	
+	
+	user
+	userid
+		1		saurabh
+		2		mittal 
+		
+		
+	order 
+	orderid
+	1
+	2
+	
+-------------------------------------------------------------------------
+
+student 
+	sid	sname		
+	1	sam		
+	2	sau
+	3	ram 
+	
+course 
+	cid cname fees 	
+	1	c		2	
+	2	c++		3	
+	3	java	5	
+	4	ai 		6 
+	
+many to many 
+
+student_course
+	 
+	
+-------------------------------------------------------------------------
+	
+flipkart sales n number of product , product belongs to more than 1 category. 
+user can buy n number of product. 
+
+
+user 
+
+product
+productid		productname	price 
+1				iphone 			12
+2				laptop			23
+
+category 
+cateid	catename
+1		phone
+2		laptop
+3		accessories 
+4		electronics 
+5		laptop_accessories 
+6		office_hardware  
+
+order 
+
+
+product_category 
+pid		catid
+2		2
+2		4
+2	
+
+
+	 
+-----------------------------------------------
+product 
+pid		pname		price 
+
+category 
+catid		catname 
+
+
+[m:m] 
+product_category 
+product_category_id		productid 	catid 
+
+
+category -> product 
+product --> category
 
 
 

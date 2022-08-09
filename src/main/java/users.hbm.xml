@@ -12,7 +12,7 @@
 			<generator class="native"></generator>
 		</id>
 
-		<property name="firstName"></property>
+		<property name="firstName" ></property>
 		<property name="email"></property>
 		<property name="password"></property>
 
@@ -20,8 +20,10 @@
 		<many-to-one name="role" column="roleId"
 			class="com.bean.RoleBean" not-null="true"></many-to-one>
 
-		<list name="vehicles"  cascade="all">
-			<key column="userId"></key>
+		<!-- List - duplicate Set - no duplicate -->
+		<!--  delete update all none -->
+		<list name="vehicles" cascade="all">
+			<key column="userId" ></key>
 			<index column="vorder"></index>
 			<one-to-many class="com.bean.VehicleBean" />
 		</list>
